@@ -1,0 +1,28 @@
+public class BasicShape
+{
+    public virtual void toBeDisplayed()
+    {
+        Console.WriteLine("Basic shape to be displayed");
+    }
+}
+
+public class Circle:BasicShape
+{
+    public override void toBeDisplayed()
+    {
+        base.toBeDisplayed();
+        Console.WriteLine("Circle to be displayed");
+    }
+
+    public void ShapeColor()
+    {
+        Console.WriteLine("colors is blue!!");
+    }
+}
+
+static void Main(string[] args)  
+    { 
+	BasicShape shape= new Circle();
+      	shape.toBeDisplayed();
+	shape.ShapeColor();
+}
